@@ -5,7 +5,6 @@
     state of a particular place in our application.
 */
 
-
 /* Below is a basic example of a test "framework" where
     our test is a function that we can reuse to check against
     different components of our application.
@@ -25,7 +24,7 @@ function expect(expression, failureMessage, successMessage) {
     to see what happens when the test fails, then change `ricksFaveAnimal`
     to get the test to pass!
 */
-var ricksFaveAnimal = 'heyena';
+var ricksFaveAnimal = 'penguin';
 
 expect(
   ricksFaveAnimal === 'penguin',
@@ -50,12 +49,14 @@ var nextAnimal;
   /* TODO:
       Assign one of your favorite animals to nextAnimal using Math.random()
       Your code begins on the next line: */
-
+nextAnimal = favoriteAnimals[Math.floor(Math.random() * favoriteAnimals.length)];
   /* TODO:
       Write a test! Use the `expect()` function we defined earlier to ensure
       that an element in the favoriteAnimals array was assigned to nextAnimal.
       Remember to: pass in your expression, and write a failure and a success
       message. Your test begins on the next line: */
-
-
-
+expect(
+  nextAnimal === 'elephants',
+  'my test failed! The next animal should have been elephants, but currently is ' + nextAnimal,
+  'my test passed! ' + nextAnimal + ' equals elephants'
+);
