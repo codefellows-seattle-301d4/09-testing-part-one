@@ -43,7 +43,7 @@ expect(
    Hint: read the Math.random description on MDN.
   */
 
-var favoriteAnimals = ['elephants', 'penguins', 'eagles', 'camels'];
+var favoriteAnimals = ['elephants' , 'penguins' , 'eagles' , 'camels'];
 var nextAnimal;
 
   /* TODO:
@@ -56,7 +56,7 @@ nextAnimal = favoriteAnimals[Math.floor(Math.random() * favoriteAnimals.length)]
       Remember to: pass in your expression, and write a failure and a success
       message. Your test begins on the next line: */
 expect(
-  nextAnimal === 'elephants',
-  'my test failed! The next animal should have been elephants, but currently is ' + nextAnimal,
-  'my test passed! ' + nextAnimal + ' equals elephants'
+  nextAnimal.match(/elephants|penguins|eagles|camels/),
+  'my test failed! The next animal should have been one of ' + favoriteAnimals + ', but currently is ' + nextAnimal,
+  'my test passed! ' + nextAnimal + ' equals one of ' + favoriteAnimals
 );
