@@ -25,13 +25,13 @@ function expect(expression, failureMessage, successMessage) {
     to see what happens when the test fails, then change `ricksFaveAnimal`
     to get the test to pass!
 */
-var ricksFaveAnimal = 'heyena';
-
-expect(
-  ricksFaveAnimal === 'penguin',
-  'ricksFavoriteAnimal should equal penguin, but currently equals ' + ricksFaveAnimal,
-  'ricksFavoriteAnimal equals penguin!');
-
+// var ricksFaveAnimal = 'penguin';
+//
+// expect(
+//   ricksFaveAnimal === 'penguin',
+//   'ricksFavoriteAnimal should equal penguin, but currently equals ' + ricksFaveAnimal,
+//   'ricksFavoriteAnimal equals penguin!');
+//
   // BEGIN WORK BELOW - test code by running `node bonus-testing-part-one.js`
   //  in your terminal!
 
@@ -50,12 +50,14 @@ var nextAnimal;
   /* TODO:
       Assign one of your favorite animals to nextAnimal using Math.random()
       Your code begins on the next line: */
-
+nextAnimal = favoriteAnimals[Math.floor((Math.random()*3 + 1))];
   /* TODO:
       Write a test! Use the `expect()` function we defined earlier to ensure
       that an element in the favoriteAnimals array was assigned to nextAnimal.
       Remember to: pass in your expression, and write a failure and a success
       message. Your test begins on the next line: */
-
-
-
+expect(
+  favoriteAnimals.indexOf(nextAnimal) !== -1,
+  nextAnimal + ' is NOT part of favoriteAnimals',
+  nextAnimal + ' is part of favoriteAnimals'
+);
