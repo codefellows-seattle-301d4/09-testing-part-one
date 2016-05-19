@@ -50,6 +50,10 @@ var nextAnimal;
       nextAnimal variable   :-)
       Your code begins on the next line: */
 
+function next() {
+  nextAnimal = favoriteAnimals[Math.floor(Math.random() * (favoriteAnimals.length))];
+}
+
   /* TODO:
       Write a test! Use the `expect()` function we defined earlier to ensure
       that an element in the favoriteAnimals array was assigned to nextAnimal.
@@ -57,14 +61,10 @@ var nextAnimal;
       just 'penguin').
       Remember to: pass in your expression, and write a failure and a success
       message. Your test begins on the next line: */
-
-function next() {
-  nextAnimal = favoriteAnimals[Math.floor(Math.random() * (favoriteAnimals.length))];
-}
-
+      
 next();
 console.log(nextAnimal);
 
 expect (
-  (favoriteAnimals.indexOf(nextAnimal) >= 0, 'nextAnimal is not in favoriteAnimals', 'nextAnimal is in favoriteAnimals')
+  favoriteAnimals.indexOf(nextAnimal) >= 0, 'nextAnimal is not in favoriteAnimals', 'nextAnimal is in favoriteAnimals'
 );
