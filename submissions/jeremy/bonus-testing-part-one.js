@@ -50,7 +50,7 @@ var nextAnimal;
   /* TODO:
       Assign one of your favorite animals to nextAnimal using Math.random()
       Your code begins on the next line: */
-nextAnimal = favoriteAnimals[Math.floor((Math.random()*3 + 1))];
+nextAnimal = favoriteAnimals[Math.floor((Math.random()*3))];
   /* TODO:
       Write a test! Use the `expect()` function we defined earlier to ensure
       that an element in the favoriteAnimals array was assigned to nextAnimal.
