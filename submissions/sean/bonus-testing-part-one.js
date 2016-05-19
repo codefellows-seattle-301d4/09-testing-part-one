@@ -46,17 +46,18 @@ var favoriteAnimals = ['elephants', 'penguins', 'eagles', 'camels'];
 var nextAnimal;
 
   /* TODO:
-      Assign one of your favorite animals dynamically by chance to the 
+      Assign one of your favorite animals dynamically by chance to the
       nextAnimal variable   :-)
       Your code begins on the next line: */
-
+nextAnimal = favoriteAnimals[Math.floor(Math.random() * favoriteAnimals.length)];
   /* TODO:
       Write a test! Use the `expect()` function we defined earlier to ensure
       that an element in the favoriteAnimals array was assigned to nextAnimal.
-      No hard-coded results allowed! (ex: seeing if nextAnimal is equal to 
+      No hard-coded results allowed! (ex: seeing if nextAnimal is equal to
       just 'penguin').
       Remember to: pass in your expression, and write a failure and a success
       message. Your test begins on the next line: */
-
-
-
+expect(
+  nextAnimal.match(/elephants|penguins|eagles|camels/),
+  'my test failed!  The next animal should have been one of ' + favoriteAnimals + ', but currently is ' + nextAnimal, + 'my test passed!' + nextAnimal + ' equals one of ' + favoriteAnimals
+);
