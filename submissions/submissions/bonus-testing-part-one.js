@@ -25,38 +25,41 @@ function expect(expression, failureMessage, successMessage) {
     to see what happens when the test fails, then change `ricksFaveAnimal`
     to get the test to pass!
 */
-var ricksFaveAnimal = 'heyena';
+var ricksFaveAnimal = 'penguin';
 
 expect(
-  ricksFaveAnimal === 'penguin',
-  'ricksFavoriteAnimal should equal penguin, but currently equals ' + ricksFaveAnimal,
-  'ricksFavoriteAnimal equals penguin!');
+    ricksFaveAnimal === 'penguin',
+    'ricksFavoriteAnimal should equal penguin, but currently equals ' + ricksFaveAnimal,
+    'ricksFavoriteAnimal equals penguin!');
 
-  // BEGIN WORK BELOW - test code by running `node bonus-testing-part-one.js`
-  //  in your terminal!
+// BEGIN WORK BELOW - test code by running `node bonus-testing-part-one.js`
+//  in your terminal!
 
-  /* ========================================================================
-  ------------------------- Favorite Animals --------------------------------
-  ===========================================================================
-   The zoo is closing in 20 minutes. You still haven't seen your four favorite
-   animals. You only have time for one. How do you choose just one?!
-  */
+/* ========================================================================
+------------------------- Favorite Animals --------------------------------
+===========================================================================
+ The zoo is closing in 20 minutes. You still haven't seen your four favorite
+ animals. You only have time for one. How do you choose just one?!
+*/
 
 var favoriteAnimals = ['elephants', 'penguins', 'eagles', 'camels'];
-var nextAnimal;
+var nextAnimal = 'camels';
 
-  /* TODO:
-      Assign one of your favorite animals dynamically by chance to the 
-      nextAnimal variable   :-)
-      Your code begins on the next line: */
-
-  /* TODO:
-      Write a test! Use the `expect()` function we defined earlier to ensure
-      that an element in the favoriteAnimals array was assigned to nextAnimal.
-      No hard-coded results allowed! (ex: seeing if nextAnimal is equal to 
-      just 'penguin').
-      Remember to: pass in your expression, and write a failure and a success
-      message. Your test begins on the next line: */
+expect(
+  nextAnimal === 'camels',
+  'next animal to visit should equal camels, but currently is' + nextAnimal,
+  'next animal to visit equals camels!');
 
 
+/* DONE:
+    Assign one of your favorite animals dynamically by chance to the
+    nextAnimal variable   :-)
+    Your code begins on the next line: */
 
+/* DONE:
+    Write a test! Use the `expect()` function we defined earlier to ensure
+    that an element in the favoriteAnimals array was assigned to nextAnimal.
+    No hard-coded results allowed! (ex: seeing if nextAnimal is equal to
+    just 'penguin').
+    Remember to: pass in your expression, and write a failure and a success
+    message. Your test begins on the next line: */
