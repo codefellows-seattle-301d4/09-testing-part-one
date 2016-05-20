@@ -51,7 +51,7 @@ var nextAnimal;
       Your code begins on the next line: */
 
 var randomNumber = function(){
-  random = Math.floor(Math.random() * 3) + 0;
+  random = Math.floor(Math.random() * favoriteAnimals.length) + 0;
   console.log('Random number: ' + random);
   return random;
 };
