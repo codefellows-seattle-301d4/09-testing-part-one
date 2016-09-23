@@ -50,7 +50,7 @@ var nextAnimal = assignAnimal();
       nextAnimal variable   :-)
       Your code begins on the next line: */
 function assignAnimal() {
-  return favoriteAnimals[Math.floor(Math.random() * 4)];
+  return favoriteAnimals[Math.floor(Math.random() * favoriteAnimals.length)];
 }
 
 expect(
