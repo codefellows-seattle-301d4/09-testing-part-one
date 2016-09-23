@@ -50,10 +50,16 @@ var nextAnimal = assignAnimal();
       nextAnimal variable   :-)
       Your code begins on the next line: */
 function assignAnimal() {
-  return favoriteAnimals[Math.ceil(Math.random() * 4)];
+  return favoriteAnimals[Math.floor(Math.random() * 4)];
 }
 
-  /* TODO:
+expect(
+  favoriteAnimals.filter(function(animal) {
+    return animal === nextAnimal;
+  }).join('') === nextAnimal,
+  'nextAnimal should be an elephant, penguin, eagle, or camel, but was ' + nextAnimal,
+  'nextAnimal is ' + nextAnimal + ', which is a correct choice.');
+  /* DONE:
       Write a test! Use the `expect()` function we defined earlier to ensure
       that an element in the favoriteAnimals array was assigned to nextAnimal.
       No hard-coded results allowed! (ex: seeing if nextAnimal is equal to
