@@ -54,9 +54,7 @@ function assignAnimal() {
 }
 
 expect(
-  favoriteAnimals.filter(function(animal) {
-    return animal === nextAnimal;
-  }).join('') === nextAnimal,
+  favoriteAnimals.indexOf(nextAnimal) > (-1),
   'nextAnimal should be an elephant, penguin, eagle, or camel, but was ' + nextAnimal,
   'nextAnimal is ' + nextAnimal + ', which is a correct choice.');
   /* DONE:
